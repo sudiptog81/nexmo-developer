@@ -14,5 +14,16 @@ After checking the code, return your user to the home page.
 Enter the following code in the `/check-code` route handler to achieve this:
 
 ```python
-# Some Python code here
+@app.route("/check-code", methods=["POST"])
+def check_code():
+    response = verify.check(session["request_id"],
+                            code=request.form.get("code"))
+
+    if response["status"] == "0":
+        session["verified_number"] = session["unverified_number"]
+        return render_template("index.html",
+                               number=session["verified_number"],
+                               brand=VONAGE_BRAND_NAME)
+    else:
+        return render_template("index.html", error=response["error_text"])
 ```
