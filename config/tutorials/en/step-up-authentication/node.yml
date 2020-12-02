@@ -14,7 +14,7 @@ introduction:
 
     You might have seen this sort of authentication being used in Internet banking. You'll log into your banking application with one set of credentials, but when you attempt to make a payment or transfer money, you'll often be asked to provide further proof that you are the account holder, such as a one-time password sent via SMS or some memorable information that only you could reasonably know.
 
-    This tutorial shows you how use Node.js and the Verify API to add this extra layer of security to your applications. You will build an application that simulates a user trying to access their account settings and being asked to verify themselves before being allowed to do so.
+    This tutorial shows you how to use Node.js and the Verify API to add this extra layer of security to your applications. You will build an application that simulates a user trying to access their account settings and being asked to verify themselves before being allowed to do so.
 tasks:
   - verify/step-up-authentication/create-the-application
   - verify/step-up-authentication/init-dependencies
