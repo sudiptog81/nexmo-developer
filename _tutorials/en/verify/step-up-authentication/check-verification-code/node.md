@@ -16,7 +16,7 @@ Enter the following code in the `/check-code` route handler to achieve this:
 ```javascript
 app.post('/check-code', (req, res) => {
 	// Check the code provided by the user
-	nexmo.verify.check(
+	vonage.verify.check(
 		{
 			request_id: verifyRequestId,
 			code: req.body.code,

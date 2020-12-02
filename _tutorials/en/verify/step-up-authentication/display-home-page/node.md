@@ -15,12 +15,12 @@ Enter the following code in the `/` route handler:
 app.get('/', (req, res) => {
 	if (!req.session.user) {
 		res.render('index', {
-			brand: NEXMO_BRAND_NAME,
+			brand: VONAGE_BRAND_NAME,
 		});
 	} else {
 		res.render('index', {
 			number: req.session.user.number,
-			brand: NEXMO_BRAND_NAME,
+			brand: VONAGE_BRAND_NAME,
 		});
 	}
 });
